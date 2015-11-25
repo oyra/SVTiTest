@@ -32,6 +32,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/small_padding"
         android:indeterminate="true"
-        android:indeterminateTint="@color/colorAccent" />
+        android:indeterminateTint="@color/colorAccent"
+        tools:ignore="UnusedAttribute" />
 
 </RelativeLayout>

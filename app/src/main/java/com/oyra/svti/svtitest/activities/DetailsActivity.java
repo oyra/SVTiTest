@@ -12,11 +12,6 @@ import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private TextView mDesc;
-    private TextView mEmail;
-    private TextView mEditor;
-    private ImageView mImg;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,18 +27,18 @@ public class DetailsActivity extends AppCompatActivity {
         if (p == null) {
             return;
         }
-        mDesc = (TextView) findViewById(R.id.desc);
-        mEditor = (TextView) findViewById(R.id.editor);
-        mEmail = (TextView) findViewById(R.id.email);
-        mImg = (ImageView) findViewById(R.id.img);
+        TextView desc = (TextView) findViewById(R.id.desc);
+        TextView editor = (TextView) findViewById(R.id.editor);
+        TextView email = (TextView) findViewById(R.id.email);
+        ImageView img = (ImageView) findViewById(R.id.img);
         setTitle(p.getName());
-        mDesc.setText(p.getDescription());
-        mEditor.setText(p.getResponsibleeditor());
-        mEmail.setText(p.getEmail());
-        Picasso.with(mImg.getContext()).load(p.getProgramimage())
+        desc.setText(p.getDescription());
+        editor.setText(p.getResponsibleeditor());
+        email.setText(p.getEmail());
+        Picasso.with(img.getContext()).load(p.getProgramimage())
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.noimage)
-                .into(mImg);
+                .into(img);
 
     }
 

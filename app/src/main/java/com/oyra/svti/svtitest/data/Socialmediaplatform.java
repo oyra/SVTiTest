@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Socialmediaplatform implements Serializable{
+class Socialmediaplatform implements Serializable{
 
     @SerializedName("platform")
     @Expose

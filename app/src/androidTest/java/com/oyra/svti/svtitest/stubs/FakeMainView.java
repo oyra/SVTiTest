@@ -6,18 +6,19 @@ import com.oyra.svti.svtitest.data.Program;
 import java.util.List;
 
 public class FakeMainView implements IMainView {
-    int itemsQuantity = 0;
+    private int mItemsQuantity = 0;
 
     @Override
     public void showItems(List<Program> items) {
         if (items == null || items.size() == 0) {
-            itemsQuantity = 0;
+            mItemsQuantity = 0;
+            return;
         }
-        itemsQuantity = items.size();
+        mItemsQuantity = items.size();
     }
 
     public int getItemsQuantity() {
-        return itemsQuantity;
+        return mItemsQuantity;
     }
 
     @Override

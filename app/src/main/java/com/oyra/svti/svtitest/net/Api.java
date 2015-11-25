@@ -6,7 +6,7 @@ import retrofit.Call;
 import retrofit.http.GET;
 import retrofit.http.Query;
 
-public interface Api {
+interface Api {
 
     @GET("programs?format=json&pagination=true")
     Call<ProgramsList> getProgramsList(@Query("page") int pageNumber, @Query("size") int pageSize);

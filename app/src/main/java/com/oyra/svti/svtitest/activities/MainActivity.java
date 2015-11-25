@@ -25,6 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements IMainView, IRecyclerItemClickListener {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private final int NUM_OF_COLUMNS = 2;
     private IMainPresenter mPresenter;
     private ProgressBar mProgress;
@@ -63,8 +64,6 @@ public class MainActivity extends AppCompatActivity implements IMainView, IRecyc
     };
 
 
-    private RecyclerView.OnItemTouchListener mOnItemTouchListener;
-
     @Override
     public void onClick(View view, int pos) {
         openDetails(pos);
@@ -96,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements IMainView, IRecyc
         mAdapter = new ListAdapter();
         mList.setAdapter(mAdapter);
         mList.addOnScrollListener(mOnScrollListener);
-        mOnItemTouchListener = new RecyclerViewItemTouchListener(this, this);
-        mList.addOnItemTouchListener(mOnItemTouchListener);
+        RecyclerView.OnItemTouchListener onItemTouchListener = new RecyclerViewItemTouchListener(this, this);
+        mList.addOnItemTouchListener(onItemTouchListener);
 
         mErrorText = (TextView) findViewById(R.id.error_text);
         mErrorText.setOnClickListener(new View.OnClickListener() {

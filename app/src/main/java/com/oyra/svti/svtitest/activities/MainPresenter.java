@@ -19,7 +19,7 @@ public class MainPresenter implements IMainPresenter, IDataListener {
 
     public void loadMore() {
         mView.showProgressBar();
-        mClient.getNews(mLastLoadedPage + 1, mView.PAGE_SIZE);
+        mClient.getNews(mLastLoadedPage + 1, IMainView.PAGE_SIZE);
     }
 
 

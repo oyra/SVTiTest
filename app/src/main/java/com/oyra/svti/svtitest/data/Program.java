@@ -44,7 +44,7 @@ public class Program implements Serializable{
     private String socialimagetemplate;
     @SerializedName("socialmediaplatforms")
     @Expose
-    private List<Socialmediaplatform> socialmediaplatforms = new ArrayList<Socialmediaplatform>();
+    private List<Socialmediaplatform> socialmediaplatforms = new ArrayList<>();
     @SerializedName("channel")
     @Expose
     private Channel channel;

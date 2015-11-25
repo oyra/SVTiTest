@@ -1,6 +1,6 @@
 package com.oyra.svti.svtitest.activities;
 
-public interface IMainPresenter {
+interface IMainPresenter {
 
     void loadMore();
 }

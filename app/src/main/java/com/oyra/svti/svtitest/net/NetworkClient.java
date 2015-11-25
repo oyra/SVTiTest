@@ -10,6 +10,7 @@ import retrofit.Retrofit;
 
 public class NetworkClient {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private final String BASE_URL = "http://api.sr.se/api/v2";
     private Api mApi;
     private IDataListener mDataListener;

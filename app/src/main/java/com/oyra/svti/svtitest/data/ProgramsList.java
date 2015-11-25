@@ -13,7 +13,7 @@ public class ProgramsList {
     private String copyright;
     @SerializedName("programs")
     @Expose
-    private List<Program> programs = new ArrayList<Program>();
+    private List<Program> programs = new ArrayList<>();
     @SerializedName("pagination")
     @Expose
     private Pagination pagination;
