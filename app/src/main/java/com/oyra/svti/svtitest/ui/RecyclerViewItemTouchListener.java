@@ -42,5 +42,9 @@ public class RecyclerViewItemTouchListener implements RecyclerView.OnItemTouchLi
 
     }
 
+    public void close() {
+        mGestureDetector = null;
+    }
+
 
 }

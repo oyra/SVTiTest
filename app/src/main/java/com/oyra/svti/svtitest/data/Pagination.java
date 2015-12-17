@@ -1,4 +1,3 @@
-
 package com.oyra.svti.svtitest.data;
 
 import com.google.gson.annotations.Expose;
@@ -23,90 +22,70 @@ public class Pagination {
     private String nextpage;
 
     /**
-     * 
-     * @return
-     *     The page
+     * @return The page
      */
     public Integer getPage() {
         return page;
     }
 
     /**
-     * 
-     * @param page
-     *     The page
+     * @param page The page
      */
     public void setPage(Integer page) {
         this.page = page;
     }
 
     /**
-     * 
-     * @return
-     *     The size
+     * @return The size
      */
     public Integer getSize() {
         return size;
     }
 
     /**
-     * 
-     * @param size
-     *     The size
+     * @param size The size
      */
     public void setSize(Integer size) {
         this.size = size;
     }
 
     /**
-     * 
-     * @return
-     *     The totalhits
+     * @return The totalhits
      */
     public Integer getTotalhits() {
         return totalhits;
     }
 
     /**
-     * 
-     * @param totalhits
-     *     The totalhits
+     * @param totalhits The totalhits
      */
     public void setTotalhits(Integer totalhits) {
         this.totalhits = totalhits;
     }
 
     /**
-     * 
-     * @return
-     *     The totalpages
+     * @return The totalpages
      */
     public Integer getTotalpages() {
         return totalpages;
     }
 
     /**
-     * 
-     * @param totalpages
-     *     The totalpages
+     * @param totalpages The totalpages
      */
     public void setTotalpages(Integer totalpages) {
         this.totalpages = totalpages;
     }
 
     /**
-     * 
-     * @return
-     *     The nextpage
+     * @return The nextpage
      */
     public String getNextpage() {
         return nextpage;
     }
 
     /**
-     * 
-     * @param nextpage
-     *     The nextpage
+     * @param nextpage The nextpage
      */
     public void setNextpage(String nextpage) {
         this.nextpage = nextpage;

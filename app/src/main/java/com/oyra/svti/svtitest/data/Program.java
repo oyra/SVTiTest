@@ -1,13 +1,13 @@
-
 package com.oyra.svti.svtitest.data;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-public class Program implements Serializable{
+public class Program implements Serializable {
 
     @SerializedName("description")
     @Expose
@@ -68,342 +68,266 @@ public class Program implements Serializable{
     private String name;
 
     /**
-     * 
-     * @return
-     *     The description
+     * @return The description
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * 
-     * @param description
-     *     The description
+     * @param description The description
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
     /**
-     * 
-     * @return
-     *     The programcategory
+     * @return The programcategory
      */
     public Programcategory getProgramcategory() {
         return programcategory;
     }
 
     /**
-     * 
-     * @param programcategory
-     *     The programcategory
+     * @param programcategory The programcategory
      */
     public void setProgramcategory(Programcategory programcategory) {
         this.programcategory = programcategory;
     }
 
     /**
-     * 
-     * @return
-     *     The payoff
+     * @return The payoff
      */
     public String getPayoff() {
         return payoff;
     }
 
     /**
-     * 
-     * @param payoff
-     *     The payoff
+     * @param payoff The payoff
      */
     public void setPayoff(String payoff) {
         this.payoff = payoff;
     }
 
     /**
-     * 
-     * @return
-     *     The broadcastinfo
+     * @return The broadcastinfo
      */
     public String getBroadcastinfo() {
         return broadcastinfo;
     }
 
     /**
-     * 
-     * @param broadcastinfo
-     *     The broadcastinfo
+     * @param broadcastinfo The broadcastinfo
      */
     public void setBroadcastinfo(String broadcastinfo) {
         this.broadcastinfo = broadcastinfo;
     }
 
     /**
-     * 
-     * @return
-     *     The email
+     * @return The email
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * 
-     * @param email
-     *     The email
+     * @param email The email
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * 
-     * @return
-     *     The phone
+     * @return The phone
      */
     public String getPhone() {
         return phone;
     }
 
     /**
-     * 
-     * @param phone
-     *     The phone
+     * @param phone The phone
      */
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
     /**
-     * 
-     * @return
-     *     The programurl
+     * @return The programurl
      */
     public String getProgramurl() {
         return programurl;
     }
 
     /**
-     * 
-     * @param programurl
-     *     The programurl
+     * @param programurl The programurl
      */
     public void setProgramurl(String programurl) {
         this.programurl = programurl;
     }
 
     /**
-     * 
-     * @return
-     *     The programimage
+     * @return The programimage
      */
     public String getProgramimage() {
         return programimage;
     }
 
     /**
-     * 
-     * @param programimage
-     *     The programimage
+     * @param programimage The programimage
      */
     public void setProgramimage(String programimage) {
         this.programimage = programimage;
     }
 
     /**
-     * 
-     * @return
-     *     The programimagetemplate
+     * @return The programimagetemplate
      */
     public String getProgramimagetemplate() {
         return programimagetemplate;
     }
 
     /**
-     * 
-     * @param programimagetemplate
-     *     The programimagetemplate
+     * @param programimagetemplate The programimagetemplate
      */
     public void setProgramimagetemplate(String programimagetemplate) {
         this.programimagetemplate = programimagetemplate;
     }
 
     /**
-     * 
-     * @return
-     *     The socialimage
+     * @return The socialimage
      */
     public String getSocialimage() {
         return socialimage;
     }
 
     /**
-     * 
-     * @param socialimage
-     *     The socialimage
+     * @param socialimage The socialimage
      */
     public void setSocialimage(String socialimage) {
         this.socialimage = socialimage;
     }
 
     /**
-     * 
-     * @return
-     *     The socialimagetemplate
+     * @return The socialimagetemplate
      */
     public String getSocialimagetemplate() {
         return socialimagetemplate;
     }
 
     /**
-     * 
-     * @param socialimagetemplate
-     *     The socialimagetemplate
+     * @param socialimagetemplate The socialimagetemplate
      */
     public void setSocialimagetemplate(String socialimagetemplate) {
         this.socialimagetemplate = socialimagetemplate;
     }
 
     /**
-     * 
-     * @return
-     *     The socialmediaplatforms
+     * @return The socialmediaplatforms
      */
     public List<Socialmediaplatform> getSocialmediaplatforms() {
         return socialmediaplatforms;
     }
 
     /**
-     * 
-     * @param socialmediaplatforms
-     *     The socialmediaplatforms
+     * @param socialmediaplatforms The socialmediaplatforms
      */
     public void setSocialmediaplatforms(List<Socialmediaplatform> socialmediaplatforms) {
         this.socialmediaplatforms = socialmediaplatforms;
     }
 
     /**
-     * 
-     * @return
-     *     The channel
+     * @return The channel
      */
     public Channel getChannel() {
         return channel;
     }
 
     /**
-     * 
-     * @param channel
-     *     The channel
+     * @param channel The channel
      */
     public void setChannel(Channel channel) {
         this.channel = channel;
     }
 
     /**
-     * 
-     * @return
-     *     The archived
+     * @return The archived
      */
     public Boolean getArchived() {
         return archived;
     }
 
     /**
-     * 
-     * @param archived
-     *     The archived
+     * @param archived The archived
      */
     public void setArchived(Boolean archived) {
         this.archived = archived;
     }
 
     /**
-     * 
-     * @return
-     *     The hasondemand
+     * @return The hasondemand
      */
     public Boolean getHasondemand() {
         return hasondemand;
     }
 
     /**
-     * 
-     * @param hasondemand
-     *     The hasondemand
+     * @param hasondemand The hasondemand
      */
     public void setHasondemand(Boolean hasondemand) {
         this.hasondemand = hasondemand;
     }
 
     /**
-     * 
-     * @return
-     *     The haspod
+     * @return The haspod
      */
     public Boolean getHaspod() {
         return haspod;
     }
 
     /**
-     * 
-     * @param haspod
-     *     The haspod
+     * @param haspod The haspod
      */
     public void setHaspod(Boolean haspod) {
         this.haspod = haspod;
     }
 
     /**
-     * 
-     * @return
-     *     The responsibleeditor
+     * @return The responsibleeditor
      */
     public String getResponsibleeditor() {
         return responsibleeditor;
     }
 
     /**
-     * 
-     * @param responsibleeditor
-     *     The responsibleeditor
+     * @param responsibleeditor The responsibleeditor
      */
     public void setResponsibleeditor(String responsibleeditor) {
         this.responsibleeditor = responsibleeditor;
     }
 
     /**
-     * 
-     * @return
-     *     The id
+     * @return The id
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * 
-     * @param id
-     *     The id
+     * @param id The id
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * 
-     * @return
-     *     The name
+     * @return The name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 
-     * @param name
-     *     The name
+     * @param name The name
      */
     public void setName(String name) {
         this.name = name;

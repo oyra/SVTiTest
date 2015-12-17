@@ -1,4 +1,3 @@
-
 package com.oyra.svti.svtitest.data;
 
 import com.google.gson.annotations.Expose;
@@ -6,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-class Socialmediaplatform implements Serializable{
+class Socialmediaplatform implements Serializable {
 
     @SerializedName("platform")
     @Expose
@@ -16,36 +15,28 @@ class Socialmediaplatform implements Serializable{
     private String platformurl;
 
     /**
-     * 
-     * @return
-     *     The platform
+     * @return The platform
      */
     public String getPlatform() {
         return platform;
     }
 
     /**
-     * 
-     * @param platform
-     *     The platform
+     * @param platform The platform
      */
     public void setPlatform(String platform) {
         this.platform = platform;
     }
 
     /**
-     * 
-     * @return
-     *     The platformurl
+     * @return The platformurl
      */
     public String getPlatformurl() {
         return platformurl;
     }
 
     /**
-     * 
-     * @param platformurl
-     *     The platformurl
+     * @param platformurl The platformurl
      */
     public void setPlatformurl(String platformurl) {
         this.platformurl = platformurl;

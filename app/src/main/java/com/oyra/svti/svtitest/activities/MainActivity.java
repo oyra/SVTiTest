@@ -15,11 +15,11 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.oyra.svti.svtitest.ui.IRecyclerItemClickListener;
 import com.oyra.svti.svtitest.R;
-import com.oyra.svti.svtitest.ui.RecyclerViewItemTouchListener;
 import com.oyra.svti.svtitest.adapter.ListAdapter;
 import com.oyra.svti.svtitest.data.Program;
+import com.oyra.svti.svtitest.ui.IRecyclerItemClickListener;
+import com.oyra.svti.svtitest.ui.RecyclerViewItemTouchListener;
 
 import java.util.List;
 
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements IMainView, IRecyc
     private TextView mErrorText;
     private boolean mLoading = false;
     private boolean mLoaded = false;
+    private RecyclerViewItemTouchListener mOnItemTouchListener;
 
 
     private RecyclerView.OnScrollListener mOnScrollListener = new OnScrollListener() {
@@ -95,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements IMainView, IRecyc
         mAdapter = new ListAdapter();
         mList.setAdapter(mAdapter);
         mList.addOnScrollListener(mOnScrollListener);
-        RecyclerView.OnItemTouchListener onItemTouchListener = new RecyclerViewItemTouchListener(this, this);
-        mList.addOnItemTouchListener(onItemTouchListener);
+        mOnItemTouchListener = new RecyclerViewItemTouchListener(this, this);
+        mList.addOnItemTouchListener(mOnItemTouchListener);
 
         mErrorText = (TextView) findViewById(R.id.error_text);
         mErrorText.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +122,19 @@ public class MainActivity extends AppCompatActivity implements IMainView, IRecyc
 
             window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
         }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mOnScrollListener = null;
+        if (mOnItemTouchListener != null) {
+            mOnItemTouchListener.close();
+            mOnItemTouchListener = null;
+        }
+
 
     }
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class MainPresenterTest extends TestCase {
 
 
-    public void testOnNewDataLoaded(){
+    public void testOnNewDataLoaded() {
         FakeMainView view = new FakeMainView();
         MainPresenter p = new MainPresenter(view);
 
@@ -24,7 +24,7 @@ public class MainPresenterTest extends TestCase {
         assertEquals(view.getItemsQuantity(), fakeData.getPrograms().size());
     }
 
-    private void initProgramsList(ProgramsList fakeData){
+    private void initProgramsList(ProgramsList fakeData) {
         List<Program> programs = new ArrayList<>();
         Pagination pagination = new Pagination();
         pagination.setTotalpages(10);
